@@ -13,13 +13,12 @@ describe("GET /", () => {
     await context.server.initialize();
   });
 
-  it("responds with 200", async ({ context }) => {
+  it("responds with 401 when no credentials provided", async ({ context }) => {
     const res = await context.server.inject({
       method: "GET",
       url: `/some-path`,
-      headers: { Authorization: `Bearer ${"test"}` },
     });
 
-    expect(res.statusCode).to.equal(200);
+    expect(res.statusCode).to.equal(401);
   });
 });
