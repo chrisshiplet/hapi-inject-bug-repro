@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "lab -v -l --sourcemaps tests"
+    "test": "lab tests"
   },
   "license": "PUBLIC DOMAIN",
   "dependencies": {

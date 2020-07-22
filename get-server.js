@@ -1,10 +1,7 @@
 const hapi = require("@hapi/hapi");
 
 module.exports = async () => {
-  const server = hapi.server({
-    port: 3000,
-    host: "localhost",
-  });
+  const server = hapi.server();
 
   await server.register(require("@hapi/basic"));
 
